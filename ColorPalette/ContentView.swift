@@ -7,17 +7,6 @@
 
 import SwiftUI
 
-enum Colors: CaseIterable {
-    case orange
-    case blue
-    case indigo
-    case white
-    case gray
-    case purple
-    
-
-}
-
 struct ContentView: View {
     var body: some View {
         GeometryReader { geometry in
@@ -26,33 +15,35 @@ struct ContentView: View {
                 Spacer()
                 
                 ZStack {
-                    Color.orange.clipShape(Capsule()).shadow(radius: 60).frame(height: geometry.size.width / 4)
+                    Color.orange.clipShape(Capsule()).shadow(radius: 20).frame(height: geometry.size.width / 4)
                     Text("Orange")
                         .font(.headline).fontDesign(.monospaced)
                 }
                 
                 ZStack {
-                    Color.white.clipShape(Capsule()).shadow(radius: 60)
+                    Color.white.clipShape(Capsule()).shadow(radius: 20)
                         .frame(height: geometry.size.width / 4)
                     Text("White")
                         .font(.headline).fontDesign(.monospaced)
                 }
                 
                 ZStack {
-                    Color.gray.opacity(0.5).clipShape(Capsule()).shadow(radius: 60)
+                    Color.gray.opacity(0.5).clipShape(Capsule()).shadow(radius: 20)
                         .frame(height: geometry.size.width / 4)
                     Text("Gray")
                         .font(.headline).fontDesign(.monospaced)
                 }
                 
                 ZStack {
-                    Color.indigo.clipShape(Capsule()).shadow(radius: 60).frame(height: geometry.size.width / 4)
+                    Color.indigo.clipShape(Capsule()).shadow(radius: 20)
+                        .frame(height: geometry.size.width / 4)
                     Text("Indigo")
                         .font(.headline).fontDesign(.monospaced)
                 }
                 
                 ZStack {
-                    Color.blue.clipShape(Capsule()).shadow(radius: 60).frame(height: geometry.size.width / 4)
+                    Color.blue.clipShape(Capsule()).shadow(radius: 20)
+                        .frame(height: geometry.size.width / 4)
                     Text("Blue")
                         .font(.headline).fontDesign(.monospaced)
                 }
@@ -61,7 +52,10 @@ struct ContentView: View {
             }
             .padding()
         }
+        
     }
+    
+
 }
 
 struct ContentView_Previews: PreviewProvider {
